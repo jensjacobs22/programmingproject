@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Nostalgames SnakePage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
+	<link rel="stylesheet" href="css/nav&footer.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+	<style>
+		#game-frame {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 70%;
+			border: 2px solid black;
+			cursor: pointer;
+            margin-top: 20px;
+		}
+		#game-frame img {
+			width: 100%;
+			height: auto;
+			transition: all 0.5s ease-in-out;
+		}
+		
+		#high-scores {
+			height: 600px;
+			border: 2px solid black;
+			margin: 20px;
+			padding: 10px;
+		}
+		#rules {
+			margin-top: 20px;
+			padding: 10px;
+            text-align: left;
+		}
+	</style>
+</head>
+<body class="" style="background: antiquewhite;">
+        <div>
+			<nav class="navbar navbar-expand-lg" style="background-color: #FFFF00;">
+				<div class="container-fluid">
+					<div class="d-flex flex-grow-1"> <a class="navbar-brand" href="#"><img src="/assets/icons/favicon.ico"
+								alt="" width="25"> Nostal-Gaming</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+					<div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarNavDropdown">
+						<ul class="navbar-nav  ms-auto flex-nowrap">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#">Games</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">High scores</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Login</a>
+							</li>
+							<li class="nav-item dropdown">
+								<div class="btn-group dropstart">
+									<button type="button" class="btn btn-secondary dropdown-toggle"
+										data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #FFFF00;"
+										id="dropdownbutton">
+										<img src="assets/images/placeHolderAvatar.jfif" alt="Avatar" width="35"
+											id="avatarImage">
+									</button>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Avatar Store</a></li>
+										<li><a class="dropdown-item" href="#">Mijn profiel</a></li>
+										<li><a class="dropdown-item" href="#">Mijn account settings</a></li>
+										<li><a class="dropdown-item" href="#">Admin</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	<main class="container-fluid" style="border: 2px solid red;">
+		<section class="row">
+			<article class="col-md-8" style="border: 2px solid green;">
+				<div id="game-frame" class="row ml-5" style="border: 2px solid orange;">
+					<h2>Snake Game</h2>
+					<img src="assets/snake/game-image2.jpg" id="phaserGame" alt="game-icon" style="border: 2px solid purple;" class="img-fluid">
+				</div>
+				<div id="rules" class="ml-5">
+					<h2>Rules and Ranking System</h2>
+					<p class="">Insert your rules and ranking system here. You can use HTML tags to format the text as needed.</p>
+				</div>
+			</article>
+			<aside class="col-md-4" style="border: 2px solid green;">
+				<div id="high-scores" class="mx-auto overflow-auto" style="border: 2px solid purple;">
+					<h2>High Scores</h2>
+					<ol>
+						<li>Player 1: 1000 points</li>
+						<li>Player 2: 800 points</li>
+						<li>Player 3: 500 points</li>
+						<li>Player 4: 300 points</li>
+						<li>Player 5: 100 points</li>
+						<li>Player 1: 1000 points</li>
+						<li>Player 2: 800 points</li>
+						<li>Player 3: 500 points</li>
+						<li>Player 4: 300 points</li>
+						<li>Player 5: 100 points</li>
+						<li>Player 1: 1000 points</li>
+						<li>Player 2: 800 points</li>
+						<li>Player 3: 500 points</li>
+						<li>Player 4: 300 points</li>
+						<li>Player 5: 100 points</li>
+						<li>Player 1: 1000 points</li>
+						<li>Player 2: 800 points</li>
+						<li>Player 3: 500 points</li>
+						<li>Player 4: 300 points</li>
+						<li>Player 5: 100 points</li>
+						<li>Player 1: 1000 points</li>
+						<li>Player 2: 800 points</li>
+						<li>Player 3: 500 points</li>
+						<li>Player 4: 300 points</li>
+						<li>Player 5: 100 points</li>
+						<li>Player 1: 1000 points</li>
+						<li>Player 2: 800 points</li>
+						<li>Player 3: 500 points</li>
+						<li>Player 4: 300 points</li>
+						<li>Player 5: 100 points</li>
+					</ol>
+				</div>
+			</aside>
+		</section>
+	</main>
+	<footer>
+		<div class="p-3 text-white-50 row" style="background-color: #000">
+			<a class="nav-link text-start col" href="#">privacy policy</a>
+			<a class="nav-link text-center col" href="#">© 2023 Copyright: Nostal-Gaming</a>
+			<a class="nav-link text-end col" href="#">contact us</a>
+		</div>
+	</footer>
+	<script>
+		const gameFrame = document.querySelector("#game-frame");
+		const frameGame = document.createElement("iframe");
+		const gameImage = document.getElementById("phaserGame");
+		frameGame.src= "/games/SnakeGame.html";
+		frameGame.id="phaserGameFrame"
+		frameGame.width = "800";
+		frameGame.height = "600"
+		console.log(frameGame)
+
+        gameFrame.addEventListener("click", function() 
+        {
+            gameFrame.replaceChild(frameGame, gameImage);
+        });
+
+	</script>
+</body>
+</html>
